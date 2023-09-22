@@ -1,0 +1,49 @@
+
+.caracteristicas {
+    flex: 1 0 0%;
+    color: white;
+    font-size: 26px;
+}
+.name {
+    background: white;
+    color: black;
+    font-size: 58px;
+    font-family: fantasy;
+}
+.colAbajo{
+    color: black;
+   
+}
+.imagenPersonaje {
+    width: 77%;
+   
+}
+.colPeliculas {
+    background: white;
+    width: 33%;
+    background: white;
+    color: black;
+    font-size: 34px;
+    font-family: fantasy;
+}
+.colVehiculos {
+    background: white;
+    width: 33%;
+    background: white;
+    color: black;
+    font-size: 34px;
+    font-family: fantasy;
+}
+.colNaves {
+    background: white;
+    width: 31%;
+    background: white;
+    color: black;
+    font-size: 34px;
+    font-family: fantasy;
+}
+a {
+    color: #e9ecef;
+    text-decoration: underline;
+    font-size: 30px;
+}

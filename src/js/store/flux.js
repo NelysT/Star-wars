@@ -2,18 +2,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			personajes: [ ],
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			vehiculos: [],
+			planetas: [],
+			personajeEspecifico: [],
+			count: 0,
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -25,6 +17,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({personajes:response.results})
 				})
 			},
+			mostrarVehiculos: () => {
+				fetch ('https://www.swapi.tech/api/vehicles/', {method: "GET"})
+				.then (response => response.json())
+				.then (response => {
+					console.log(response)
+					setStore({vehiculos:response.results})
+				})
+			},
+			mostrarPlanetas: () => {
+				fetch ('https://www.swapi.tech/api/planets', {method: "GET"})
+				.then (response => response.json())
+				.then (response => {
+					console.log(response)
+					setStore({planetas:response.results})
+				})
+			},
+			contarClickFavoritos: () => {
+				// Obtén el estado actual
+  				const store = getStore();
+  				setStore({ count: store.count + 1 });
+			  },
+			
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},

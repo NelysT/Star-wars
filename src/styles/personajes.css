@@ -3,3 +3,41 @@
     flex: 0 0 auto;
     width: 17.666667%;
 }
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    background: #383d426b;
+}
+
+.tittlePersonajes {
+    font-size: 2.5rem;
+    color: #faf6f6;
+    font-family:jedi-subtitle;
+    padding: 10px;
+
+}
+
+h3, h3 {
+    font-size: 1.75rem;
+    color: white;
+    font-family: monospace;
+}
+.fa-solid, .fas {
+    font-weight: 900;
+    color: red;
+    font-size: 25px;
+}
+.btnLeerMas {
+    color: #fff;
+    background-color: #5b529694;
+    border-color: #5b529694;
+    margin-left: 33px;
+    font-size: 34px;
+}
