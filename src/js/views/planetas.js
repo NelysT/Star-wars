@@ -8,7 +8,7 @@ export const Planetas = () => {
     <div>
       <h1 className="tittlePlanetas">Planetas</h1>
       <div className="row">
-        {store.vehiculos.map((item, index) => {
+        {store.planetas.map((item, index) => {
         
             return (
               <div key={index} className="col-md-2 col-12">

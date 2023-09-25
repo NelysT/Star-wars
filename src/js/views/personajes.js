@@ -15,28 +15,24 @@ export const Personajes = () => {
       <h1 className="tittlePersonajes">Personajes</h1>
       <div className="row">
         {store.personajes.map((item, index) => {
-          // Renderizar solo los primeros 10 personajes (5 por fila)
+         
           return (
-            <div key={index} className="col-md-2 col-12">
+            <div key={index} className="col">
               <div className="card">
                 <img
                   className="card-img-top"
                   src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`}
                   alt="..."
                 />
-                <div className="card-body">
-                  <h3>{item.name} {store.count}</h3>
+                <div className="card-body d-flex justify-content-between">
+                <Link to={`/personajeEspecifico/${item.uid}`}>
+                  <h3>{item.name}</h3>
+                </Link>
+                <i className="fa-solid fa-heart me-3" onClick={() => actions.agregarFavoritos(item.name)}
+                  ></i>
                 </div>
-                <div className="d-flex justify-content-between">
-                
-                  <Link to={`/personajeEspecifico/${item.uid}`}>
-                    <span className="btnLeerMas btn-lg" href="#" role="button">
-                      Leer mas
-                    </span>
-                  </Link>
-                  <i className="fa-solid fa-heart me-3" onClick={() => actions.contarClickFavoritos()}></i>
-                </div>
-
+                          
+                   
               </div>
             </div>
           );

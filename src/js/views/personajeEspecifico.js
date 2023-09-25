@@ -19,6 +19,11 @@ export const PersonajeEspecifico = () => {
     .catch(error => error)
  },[])
   console.log("variable de InfoCharacter", infoCharacter)
+
+  function cargarData(categoria) {
+ let x = infoCharacter === "" ? "Cargando" : infoCharacter.properties.categoria
+ return x
+  }  
   return (
     <div>
         <div>{params.uid}</div>
@@ -35,41 +40,22 @@ export const PersonajeEspecifico = () => {
                         alt=""
                     ></img>
                 </div>
+                {infoCharacter === "" ? 
+                <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+                :
                 <div className="caracteristicas">
-                    <div className="name">{infoCharacter === "" ? "Cargando" : infoCharacter.properties.name}</div>
-                    <div>Height: {infoCharacter === "" ? "Cargando" : infoCharacter.properties.height}</div>
-                    <div>Mass: {infoCharacter === "" ? "Cargando" : infoCharacter.properties.mass}</div>
-                    <div>Gender: {infoCharacter === "" ? "Cargando" : infoCharacter.properties.gender}</div>                     
-                    <div>Hair color:{infoCharacter === "" ? "Cargando" : infoCharacter.properties.hair_color}</div> 
-                    <div>Skin color: {infoCharacter === "" ? "Cargando" : infoCharacter.properties.skin_color}</div> 
-                    <div>Homeworld: {infoCharacter === "" ? "Cargando" : infoCharacter.properties.homeworld}</div> 
+                    <div className="name">{infoCharacter.properties.name}</div>
+                    <div>Height: {infoCharacter.properties.height}</div>
+                    <div>Mass: {infoCharacter.properties.mass}</div>
+                    <div>Gender: {infoCharacter.properties.gender}</div>                     
+                    <div>Hair color:{infoCharacter.properties.hair_color}</div> 
+                    <div>Skin color: {infoCharacter.properties.skin_color}</div>
                 </div>
+                }
             </div>
         </div>
-        <div className="colAbajo container text-center">
-            <div className="row">
-                <div className="colPeliculas me-2">
-                    Peliculas 
-                    <hr className="dropdown-divider"></hr>
-                    <li></li>
-                    <li></li>
-                </div>
-                <div className="colVehiculos me-2">
-                    Vehiculos
-                    <hr className="dropdown-divider"></hr>
-                    <li></li>
-                    <li></li>
-                </div>
-                <div className="colNaves me-2">
-                    Naves
-                    <hr className="dropdown-divider"></hr>
-                    <li></li>
-                    <li></li>
-                </div>
             </div>
-        </div>
-
-
-    </div>
 );
 };

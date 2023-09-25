@@ -14,14 +14,15 @@
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
     background: #383d426b;
+    height: 300px;
 }
 
 .tittlePersonajes {
     font-size: 2.5rem;
     color: #faf6f6;
-    font-family:jedi-subtitle;
+    font-family:fantasy;
     padding: 10px;
-
+   
 }
 
 h3, h3 {
@@ -31,7 +32,7 @@ h3, h3 {
 }
 .fa-solid, .fas {
     font-weight: 900;
-    color: red;
+    color: #bb2d4c;
     font-size: 25px;
 }
 .btnLeerMas {
@@ -40,4 +41,8 @@ h3, h3 {
     border-color: #5b529694;
     margin-left: 33px;
     font-size: 34px;
+}
+.card-img-top {
+    object-fit: cover;
+    aspect-ratio: 4/3;
 }

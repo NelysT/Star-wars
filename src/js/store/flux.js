@@ -5,7 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			vehiculos: [],
 			planetas: [],
 			personajeEspecifico: [],
-			count: 0,
+			favoritos:[]
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -33,12 +33,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({planetas:response.results})
 				})
 			},
-			contarClickFavoritos: () => {
-				// Obtén el estado actual
-  				const store = getStore();
-  				setStore({ count: store.count + 1 });
-			  },
 			
+			agregarFavoritos: (name) => {
+				const store = getStore();
+				const favoritos = store.favoritos;
+				const nuevosFavoritos = favoritos.includes(name)
+				? favoritos 
+				: [...favoritos, name]; 
+
+				setStore({ ...store, favoritos: nuevosFavoritos });
+			},
+
+						//Eliminar tareas con el ICONO -
+			eliminarfavoritos:(index) => {
+				const store = getStore();
+				let eliminar = store.favoritos.filter((t, i) => i !== index);
+				setStore({...store, favoritos:eliminar});
+			},
+			
+
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
