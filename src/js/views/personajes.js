@@ -3,24 +3,49 @@ import { Context } from "../store/appContext";
 import "../../styles/personajes.css";
 import { useNavigate } from "react-router";
 import { Link, useParams } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 export const Personajes = () => {
   const { store, actions } = useContext(Context);
   const { navigate } = useNavigate();
+  let settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    
+    responsive: [
+      {breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }},
+      {breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }}
+    ]
+  };
   
   
  
   return (
     <div>
       <h1 className="tittlePersonajes">Personajes</h1>
-      <div className="row">
+      
+      <Slider {...settings} style={{"width":"90%", "margin":"auto"}}>
         {store.personajes.map((item, index) => {
          
           return (
-            <div key={index} className="col">
-              <div className="card">
+            <div  key={index}>
+              <div className="card" style={{"height":"100%"}}>
                 <img
                   className="card-img-top"
+                  style={{"height":"100%", "width":"100%", "objectFit":"contain"}}
                   src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`}
                   alt="..."
                 />
@@ -37,8 +62,9 @@ export const Personajes = () => {
             </div>
           );
         })}
+         </Slider>
       </div>
-    </div>
+   
   );
 };
 

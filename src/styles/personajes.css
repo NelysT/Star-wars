@@ -42,7 +42,3 @@ h3, h3 {
     margin-left: 33px;
     font-size: 34px;
 }
-.card-img-top {
-    object-fit: cover;
-    aspect-ratio: 4/3;
-}
