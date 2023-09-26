@@ -10,9 +10,18 @@ import { Planetas } from "./planetas";
 export const Home = () => {
 	
 	return(
-	<div className="text-center mt-5">
-		<Personajes />
-		<Vehiculos />
-		<Planetas />
+	<div className="text-center">
+		<div>
+			<Personajes />
+		</div>
+		<div>
+			<Planetas />
+		</div>
+        <div>
+			<Vehiculos />
+		</div>
+		
+		
+		
 	</div>
 );}

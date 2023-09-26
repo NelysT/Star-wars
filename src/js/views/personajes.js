@@ -35,21 +35,21 @@ export const Personajes = () => {
  
   return (
     <div>
-      <h1 className="tittlePersonajes">Personajes</h1>
+      <h1 className="tittle">Personajes</h1>
       
       <Slider {...settings} style={{"width":"90%", "margin":"auto"}}>
         {store.personajes.map((item, index) => {
          
           return (
-            <div  key={index}>
+            <div className="contain" key={index}>
               <div className="card" style={{"height":"100%"}}>
                 <img
-                  className="card-img-top"
+                  className="card-img-top mb-5px"
                   style={{"height":"100%", "width":"100%", "objectFit":"contain"}}
                   src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`}
                   alt="..."
                 />
-                <div className="card-body d-flex justify-content-between">
+                <div className="card-body d-flex justify-content-evenly">
                 <Link to={`/personajeEspecifico/${item.uid}`}>
                   <h3>{item.name}</h3>
                 </Link>
