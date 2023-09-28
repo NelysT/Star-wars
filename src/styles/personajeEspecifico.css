@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 .caracteristicas {
     flex: 1 0 0%;
     color: white;
@@ -24,6 +24,28 @@ a {
     text-decoration: underline;
     font-size: 30px;
 }
-.row {
-    background: #383d426b;
+
+a:hover {
+    color: #dcd22b;
+    text-decoration: underline;
+}
+.row .header {
+    border-bottom: 1px solid #121212;
+    background: #000000;
+}
+
+.name {
+    margin-bottom: 10px;
+    font-family: 'Righteous', cursive;
+    padding: 0px 10px;
+    background: #dcd22b;
+    color: black;
+    font-size: 58px;
+    /* font-family: fantasy; */
+}
+
+div {
+    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
 }

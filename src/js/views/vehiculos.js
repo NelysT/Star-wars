@@ -41,8 +41,8 @@ export const Vehiculos = () => {
           <div  key={index}>
             <div className="card" style={{"height":"100%"}}>
               <img
-                className="card-img-top mb-5px"
-                style={{"height":"100%", "width":"100%", "objectFit":"contain"}}
+                className="card-img-top"
+       
                     src={`https://starwars-visualguide.com/assets/img/vehicles/${item.uid}.jpg`}
                     alt="..."
                     />

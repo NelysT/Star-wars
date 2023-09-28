@@ -10,7 +10,7 @@ import { Planetas } from "./planetas";
 export const Home = () => {
 	
 	return(
-	<div className="text-center">
+	<div className="text-center principal">
 		<div>
 			<Personajes />
 		</div>
@@ -20,8 +20,6 @@ export const Home = () => {
         <div>
 			<Vehiculos />
 		</div>
-		
-		
 		
 	</div>
 );}

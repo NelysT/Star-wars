@@ -3,6 +3,28 @@
 */
 /* Extra small devices (phones, 600px and down) */
 
+.row.header {
+    background: black;
+    border-bottom: 1px solid #5959594f;
+}
+
+img.card-img-top {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/4;
+}
+
+footer.footer.text-center {
+    font-weight: 100;
+    font-size: 14px;
+    border-top: 1px solid #242424;
+    padding: 5px 20px;
+    background: #000000;
+    margin-top: 86px;
+    color: #dcd22b;
+    font-family: 'Poppins', sans-serif;
+}
+
 
 @media only screen and (max-width: 600px) {
     .btnLeerMas {

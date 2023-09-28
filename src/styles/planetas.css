@@ -1,7 +1,9 @@
-.tittlePlanetas {
-    font-size: 2.5rem;
-    color: #faf6f6;
-    font-family:fantasy;
+.tittlePlanetas {    
+    font-family: 'Righteous', cursive;
+    font-size: 3.5rem;
+    color: #dcd22b;
+
     padding: 60px 10px;
-  
 }
+
+

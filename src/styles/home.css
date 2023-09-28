@@ -1,9 +1,8 @@
 body {
-    
-    background-image:url("https://2.blogs.elcomercio.pe/tallerdehistorias/wp-content/uploads/sites/254/2015/02/Estrellas.jpg");
+    background: url(http://www.script-tutorials.com/demos/360/images/stars.png) top center #000;
 }
-.imgPersonajes {
-    width: 15%;
+.principal {
+    background: rgb(0 0 0 / 59%);
 }
 .list-group-item {
     background: black;

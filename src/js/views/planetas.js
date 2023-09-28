@@ -41,7 +41,7 @@ export const Planetas = () => {
                 <div className="card" style={{"height":"100%"}}>
                 <img
                   className="card-img-top"
-                  style={{"height":"100%", "width":"100%", "objectFit":"contain"}}
+              
                     src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`}
                     onError={({ currentTarget }) => {
                       currentTarget.onerror = null; // prevents looping
