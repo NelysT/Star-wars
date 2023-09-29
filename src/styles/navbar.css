@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Space+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
-
+.dropdown-menu-dark {
+  color: #dee2e6;
+  background-color: #212529bd;
+}
 img#logotipo {
   vertical-align: middle;
   object-fit: cover;
