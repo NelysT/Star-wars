@@ -12,6 +12,8 @@ import { Footer } from "./component/footer";
 import { PersonajeEspecifico } from "./views/personajeEspecifico";
 import { Personajes } from "./views/personajes";
 import Carrusel from "./views/carrusel";
+import { VehiculoEspecifico } from "./views/vehiculoEspecifico";
+import { PlanetaEspecifico } from "./views/planetaEspecifico";
 
 
 //create your first component
@@ -29,6 +31,8 @@ const Layout = () => {
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
 						<Route path="/personajeEspecifico/:uid" element={<PersonajeEspecifico />} />
+						<Route path="/vehiculoEspecifico/:uid" element={<VehiculoEspecifico />} />
+						<Route path="/planetaEspecifico/:uid" element={<PlanetaEspecifico />} />
 						<Route path="/personajes" element={<Personajes />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="/carrusel" element={<Carrusel />} />

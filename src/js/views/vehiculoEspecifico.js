@@ -1,17 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
-import "../../styles/personajeEspecifico.css";
-import { Personajes } from "./personajes";
+
 import { useParams} from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export const PersonajeEspecifico = () => {
+export const VehiculoEspecifico = () => {
     const { store, actions } = useContext(Context);
     const params = useParams();
     const [infoCharacter, setInfoCharacter] = useState("") ;
  
     useEffect(()=>{
-    fetch(`https://www.swapi.tech/api/people/${params.uid}`)
+    fetch(`https://www.swapi.tech/api/vehicles/${params.uid}`)
     .then(response => response.json())
     .then(data => {
         setInfoCharacter(data.result)
@@ -26,7 +25,7 @@ export const PersonajeEspecifico = () => {
   }  
   return (
     <div>
-        
+        <div>{params.uid}</div>
             <div className="container">
                 <div className="home">
                 <Link to={"/"}>
@@ -35,8 +34,8 @@ export const PersonajeEspecifico = () => {
                 </div>
             <div className="row mt-3">
                 <div className="col">
-                    <img className="imagenPersonaje"
-                        src={`https://starwars-visualguide.com/assets/img/characters/${params.uid}.jpg`}
+                    <img className="imagenVehiculo"
+                        src={`https://starwars-visualguide.com/assets/img/vehicles/${params.uid}.jpg`}
                         alt=""
                     ></img>
                 </div>
@@ -47,11 +46,19 @@ export const PersonajeEspecifico = () => {
                 :
                 <div className="caracteristicas">
                     <div className="name">{infoCharacter.properties.name}</div>
-                    <div>Height: {infoCharacter.properties.height}</div>
-                    <div>Mass: {infoCharacter.properties.mass}</div>
-                    <div>Gender: {infoCharacter.properties.gender}</div>                     
-                    <div>Hair color:{infoCharacter.properties.hair_color}</div> 
-                    <div>Skin color: {infoCharacter.properties.skin_color}</div>
+                    <div>Model: {infoCharacter.properties.model}</div>
+                    <div>Vehicle Class: {infoCharacter.properties.vehicle_class}</div>
+                    <div>Manufacturer: {infoCharacter.properties.manufacturer}</div>
+                    <div>Cost in Credit: {infoCharacter.properties.cost_in_credits}</div>                     
+                    <div>Length:{infoCharacter.properties.length}</div> 
+                    <div>Crew: {infoCharacter.properties.crew}</div>
+                    <div>Passengers: {infoCharacter.properties.passengers}</div>
+                    <div>Max Atmosphering Speed: {infoCharacter.properties.max_atmosphering_speed}</div>                     
+                    <div>Cargo Capacity:{infoCharacter.properties.cargo_capacity}</div> 
+                    <div>Consumables: {infoCharacter.properties.consumables}</div>
+                    <div>Created:{infoCharacter.properties.created}</div> 
+                    <div>Edited: {infoCharacter.properties.edited}</div>
+                    
                 </div>
                 }
             </div>
@@ -59,3 +66,7 @@ export const PersonajeEspecifico = () => {
             </div>
 );
 };
+
+
+     
+      

@@ -50,7 +50,7 @@ export const Planetas = () => {
                     alt="..."
                   />
                   <div className="card-body d-flex justify-content-evenly">
-                <Link to={`/personajeEspecifico/${item.uid}`}>
+                <Link to={`/planetaEspecifico/${item.uid}`}>
                   <h3>{item.name}</h3>
                 </Link>
                 <i className="fa-solid fa-heart me-3" onClick={() => actions.agregarFavoritos(item.name)}
